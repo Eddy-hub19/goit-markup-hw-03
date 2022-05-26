@@ -1,14 +1,24 @@
 :root {
+    --white-color: #ffff;
+    --links-color: #757575;
     --primary-bg-color: #2F303A;
     --title-text-color: #212121;
+    --padding-section: 94px;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
 }
 
-p,h1,h2,h3,h4,h5,h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
+    padding: 0;
 }
 
 button {
@@ -22,6 +32,13 @@ a {
 
 ul li {
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }
 
 
@@ -52,6 +69,7 @@ ul li {
 .header-top {
     display: flex;
     align-items: center;
+    padding: 24px 0 24px 0;
 }
 
 .line-bottom {
@@ -98,12 +116,11 @@ ul li {
 }
 
 .header-link {
-    color: #757575;
+    color: var(--links-color);
     font-size: 14px;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    
 }
 
 .header-top ul li a:hover {
@@ -113,13 +130,7 @@ ul li {
 
 /* main */
 
-main {
-    text-align: center;
-}
-
 section h2 {
-    margin-top: 94px;
-    margin-bottom: 50px;
     font-weight: 700;
     font-size: 36px;
     text-align: center;
@@ -134,6 +145,7 @@ section h2 {
     padding-top: 200px;
     padding-bottom: 200px;
     background: var(--primary-bg-color);
+    text-align: center;
 }
 
 .banner-title {
@@ -143,7 +155,7 @@ section h2 {
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--white-color);
 }
 
 .banner-btn {
@@ -153,7 +165,7 @@ section h2 {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.8;
-    color: white;
+    color: var(--white-color);
     background: #2196F3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -169,8 +181,8 @@ section h2 {
 
 /* features */
 
-.features{
-    padding-top: 94px;
+.features {
+    padding-top: var(--padding-section);
 }
 
 .features-list {
@@ -183,13 +195,13 @@ section h2 {
     line-height: 1.1;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    margin-bottom: 10px;
     color: var(--title-text-color);
 }
 
 .features-list li {
     width: 270px;
     text-align: left;
-    margin-right: 30px;
 }
 
 .features-list li:not(:last-child) {
@@ -200,16 +212,19 @@ section h2 {
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
-    color: #757575;
+    color: var(--links-color)
 }
 
 
-/*
-about */
+/*about */
 
 .about {
-    display: flex;
-    flex-direction: column;
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+}
+
+.about-title{
+    padding-bottom: 50px;
 }
 
 .about-list {
@@ -217,7 +232,7 @@ about */
     justify-content: center;
 }
 
-.about-list-item {
+.about-list-item:not(:last-child) {
     margin-right: 30px;
 }
 
@@ -226,10 +241,12 @@ about */
 
 .teams {
     background: #F5F4FA;
-    display: flex;
-    flex-direction: column;
-    margin-top: 94px;
-    padding-bottom: 94px;
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+}
+
+.teams-title{
+    padding-bottom: 50px;
 }
 
 .teams-list {
@@ -241,15 +258,14 @@ about */
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-
 }
 
 .teams-item:not(:last-child) {
     margin-right: 30px;
 }
 
-.teams-wrap{
-    margin: 30px 30px;
+.teams-wrap {
+    padding: 30px 30px;
 }
 
 .teams-list-title {
@@ -259,15 +275,14 @@ about */
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-text-color);
-    
 }
 
 .teams-list-descr {
     line-height: 1.18;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #757575;
-    margin-top: 30px;
+    color: var(--links-color);
+    margin-top: 10px;
 }
 
 
@@ -280,7 +295,7 @@ footer {
 }
 
 footer a {
-    color: white;
+    color: var(--white-color);
 }
 
 .footer-bottom {
@@ -291,14 +306,12 @@ footer a {
 }
 
 .footer-logo {
-    margin-top: 60px;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: #2196F3;
-    margin-right: 93px;
 }
 
 address {
@@ -317,42 +330,50 @@ address {
     letter-spacing: 0.03em;
 }
 
+.footer-list-item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
 .footer-link {
     color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-link:hover,
 .footer-link:focus {
-    color: white;
+    color: var(--white-color);
 }
 
 
 /* for footer link */
 
 .color-white {
-    color: white;
+    color: var(--white-color);
 }
 
 
 /* portfolio */
 
-.main-filter{
-    display: flex;
-    justify-content: center;
-}
-
-.main-list{
+.main-filter {
     display: flex;
     align-items: center;
-    margin-top: 94px;
+    justify-content: center;
+    margin-top: var(--padding-section);
+    margin-bottom: var(--padding-section);
+}
+
+.main-list {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 50px;
 }
 
 .main-list li:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 8px;
 }
 
 .main-list-btn {
-    padding: 20px 40px;
+    padding: 10px 32px;
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -366,7 +387,7 @@ address {
 }
 
 .main-list-btn:hover {
-    color: white;
+    color: var(--white-color);
     background: #2196f3;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -379,21 +400,32 @@ address {
     margin-top: 34px;
 }
 
-.store-list{
+.store-list {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    width: 1250px;
+    margin-left: -30px;
+    margin-bottom: -30px;
 }
 
 .store-item {
-    background: #FFFFFF;
-    border: 1px solid #EEEEEE;
-    margin: 0 30px 30px 0;
+    background: var(--white-color);
+    width: calc((100% / 3) - 30px);
+    margin-left: 30px;
+    margin-bottom: 30px;
+    display: block;
 }
 
-.store-item h3 {
+.store-wrap {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.store-wrap-title {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -401,14 +433,9 @@ address {
     color: var(--title-text-color);
 }
 
-.store-item p {
+.store-wrap-descr{
     line-height: 1.8;
     letter-spacing: 0.03em;
-    color: #757575;
+    color: var(--links-color);
     margin-top: 4px;
-}
-
-.store-wrap {
-    text-align: start;
-    padding: 24px;
 }

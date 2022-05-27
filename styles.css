@@ -374,7 +374,7 @@ address {
 }
 
 .main-list-btn {
-    padding: 10px 32px;
+    padding: 6px 27px;
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -398,7 +398,6 @@ address {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 34px;
 }
 
 .store-list {
